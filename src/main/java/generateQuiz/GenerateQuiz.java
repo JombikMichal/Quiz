@@ -18,11 +18,10 @@ public class GenerateQuiz {
     public GenerateQuiz() {
         this.questionsHolder = new QuestionsHolder();
         this.questionList = new ArrayList<>();
-        getQuestionList();
     }
 
     private int[] getRandomedQuestionNumbers() {
-        this.randomNumberGenerator = new RandomNumberGenerator(3,questionsHolder.getCorrectAnswerQuestionMap().size());
+        this.randomNumberGenerator = new RandomNumberGenerator(5,questionsHolder.getCorrectAnswerQuestionMap().size());
         randomedQuestionNumbers = randomNumberGenerator.getNumbersArray();
         return randomedQuestionNumbers;
     }

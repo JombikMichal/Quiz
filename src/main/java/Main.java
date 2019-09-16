@@ -1,7 +1,7 @@
 import generateQuiz.GenerateQuiz;
 import generateQuiz.RandomNumberGenerator;
 import generateQuiz.SingleAnswerQuestion;
-import generator.*;
+
 
 import java.util.ArrayList;
 import java.util.List;
@@ -32,11 +32,10 @@ public class Main {
                 answer = scanner.next();
                 key.evaluation(answer);
                 finish++;
-                System.out.println("kokot" + finish);
             }
             System.out.println("You had " + GenerateQuiz.winCount + "/" + allQuestions.size() +" answers correct");
 
-        }while (finish <= allQuestions.size());
+        }while (finish < allQuestions.size());
 
     }
 
