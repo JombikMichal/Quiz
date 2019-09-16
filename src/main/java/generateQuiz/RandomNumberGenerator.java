@@ -1,4 +1,4 @@
-package generator;
+package generateQuiz;
 
 import java.util.Random;
 
@@ -7,14 +7,11 @@ public class RandomNumberGenerator {
     private int numCount;
     private int numRange;
 
-    public RandomNumberGenerator(int numCount, int numRangel) {
+    public RandomNumberGenerator(int numCount, int numRange) {
         this.numCount = numCount;
-        this.numRange = numRangel;
+        this.numRange = numRange;
     }
 
-    public int[] getNumbArray() {
-        return getNumbersArray();
-    }
 
     public boolean contains(final int[] array, final int v) {
 

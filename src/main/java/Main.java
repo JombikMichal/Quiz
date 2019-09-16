@@ -1,18 +1,23 @@
-import generator.QuizGenerator;
-import generator.SingleAnswerQuestion;
-import generator.SingleAnswerQuestionGenerator;
+import generateQuiz.GenerateQuiz;
+import generateQuiz.RandomNumberGenerator;
+import generateQuiz.SingleAnswerQuestion;
+import generator.*;
 
-import java.security.SecureRandom;
-import java.util.Map;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 public class Main {
     private static Scanner scanner = new Scanner(System.in);
 
     public static void main(String[] args) {
+        int finish = 0;
+        List<SingleAnswerQuestion> allQuestions;
         do{
             final String playerName;
-            SingleAnswerQuestionGenerator singleAnswerQuestionGenerator = new SingleAnswerQuestionGenerator();
+            String answer;
+            GenerateQuiz generateQuiz = new GenerateQuiz();
+            allQuestions = generateQuiz.getQuestionList();
 
 
             System.out.println("Hello player! What is your name?");
@@ -21,28 +26,17 @@ public class Main {
             + playerName +"!!!");
             System.out.println("***** START QUIZ!!! *****");
 
-            System.out.println(singleAnswerQuestionGenerator.getQuestionHolder().getCorrectAnswerQuestionMap());
 
+            for (SingleAnswerQuestion key : allQuestions){
+                key.display();
+                answer = scanner.next();
+                key.evaluation(answer);
+                finish++;
+                System.out.println("kokot" + finish);
+            }
+            System.out.println("You had " + GenerateQuiz.winCount + "/" + allQuestions.size() +" answers correct");
 
-
-//
-//            for (String key : singleAnswerQuestion.generateQuestion().keySet()) {
-//                System.out.println(key);
-//                for ( Character keyAnswer : singleAnswerQuestion.getAnswers(singleAnswerQuestion.generateQuestion().get(key)).keySet() ) {
-////                    System.out.println(singleAnswerQuestion.getAnswers(singleAnswerQuestion.generateQuestion().get(key)).get(keyAnswer));
-//
-//                    System.out.println(singleAnswerQuestion.getAnswers(key));
-//
-//                    //answers = singleAnswerQuestion.getAnswers(singleAnswerQuestion.generateQuestion().get(key)).get(keyAnswer);
-//
-//                }
-//                System.out.println(singleAnswerQuestion.getAnswers(singleAnswerQuestion.generateQuestion().get(key)).get(scanner.next().charAt(0)));
-//                //singleAnswerQuestion.ev(key,scanner.next().charAt(0));
-//            }
-
-            scanner.next();
-
-        }while (true);
+        }while (finish <= allQuestions.size());
 
     }
 
