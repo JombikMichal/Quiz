@@ -2,8 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="159ea822-1c20-443a-88c6-e40d2ddb427c" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/generateQuiz/AbstractQuestion.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/generateQuiz/GenerateQuiz.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/generateQuiz/GenerateQuiz.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/generateQuiz/QuestionsHolder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/generateQuiz/QuestionsHolder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/generateQuiz/SingleAnswerQuestion.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/generateQuiz/SingleAnswerQuestion.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -21,8 +25,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/generateQuiz/GenerateQuiz.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="345">
-              <caret line="23" column="64" selection-start-line="23" selection-start-column="64" selection-end-line="23" selection-end-column="64" />
+            <state relative-caret-position="246">
+              <caret line="23" column="65" selection-start-line="23" selection-start-column="65" selection-end-line="23" selection-end-column="65" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -33,8 +37,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/generateQuiz/QuestionsHolder.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="364">
-              <caret line="32" column="34" selection-start-line="32" selection-start-column="34" selection-end-line="32" selection-end-column="34" />
+            <state relative-caret-position="342">
+              <caret line="36" column="17" selection-start-line="36" selection-start-column="17" selection-end-line="36" selection-end-column="17" />
               <folding>
                 <element signature="e#730#731#0" expanded="true" />
                 <element signature="e#780#781#0" expanded="true" />
@@ -46,15 +50,23 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/generateQuiz/SingleAnswerQuestion.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="405">
-              <caret line="27" column="41" selection-start-line="27" selection-start-column="41" selection-end-line="27" selection-end-column="41" />
+            <state relative-caret-position="150">
+              <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
               <folding>
-                <element signature="e#463#464#0" expanded="true" />
-                <element signature="e#494#495#0" expanded="true" />
-                <element signature="e#621#622#0" expanded="true" />
-                <element signature="e#659#660#0" expanded="true" />
-                <element signature="e#1095#1096#0" expanded="true" />
-                <element signature="e#1124#1125#0" expanded="true" />
+                <element signature="e#362#363#0" expanded="true" />
+                <element signature="e#409#410#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/generateQuiz/AbstractQuestion.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="140">
+              <caret line="19" column="31" selection-start-line="19" selection-start-column="31" selection-end-line="19" selection-end-column="31" />
+              <folding>
+                <element signature="e#722#723#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -63,8 +75,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="19" selection-start-line="19" selection-end-line="19" />
+            <state relative-caret-position="290">
+              <caret line="29" column="61" selection-start-line="29" selection-start-column="61" selection-end-line="29" selection-end-column="61" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -108,10 +120,10 @@
         <option value="$PROJECT_DIR$/src/main/java/generator/QuestionHolder.java" />
         <option value="$PROJECT_DIR$/src/main/java/generator/QuizGenerator.java" />
         <option value="$PROJECT_DIR$/src/main/java/generateQuiz/RandomNumberGenerator.java" />
+        <option value="$PROJECT_DIR$/src/main/java/generateQuiz/SingleAnswerQuestion.java" />
         <option value="$PROJECT_DIR$/src/main/java/generateQuiz/AbstractQuestion.java" />
         <option value="$PROJECT_DIR$/src/main/java/Main.java" />
         <option value="$PROJECT_DIR$/src/main/java/generateQuiz/QuestionsHolder.java" />
-        <option value="$PROJECT_DIR$/src/main/java/generateQuiz/SingleAnswerQuestion.java" />
         <option value="$PROJECT_DIR$/src/main/java/generateQuiz/GenerateQuiz.java" />
       </list>
     </option>
@@ -223,7 +235,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-1920" y="23" width="1920" height="1003" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.18317358" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -305,13 +316,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/generateQuiz/AbstractQuestion.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="4" selection-start-line="3" selection-start-column="4" selection-end-line="3" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/generator/AbstractQuestionGenerator.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="79">
@@ -329,16 +333,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="19" selection-start-line="19" selection-end-line="19" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/generateQuiz/RandomNumberGenerator.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="214">
@@ -346,25 +340,41 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="290">
+          <caret line="29" column="61" selection-start-line="29" selection-start-column="61" selection-end-line="29" selection-end-column="61" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/generateQuiz/SingleAnswerQuestion.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
-          <caret line="27" column="41" selection-start-line="27" selection-start-column="41" selection-end-line="27" selection-end-column="41" />
+        <state relative-caret-position="150">
+          <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
           <folding>
-            <element signature="e#463#464#0" expanded="true" />
-            <element signature="e#494#495#0" expanded="true" />
-            <element signature="e#621#622#0" expanded="true" />
-            <element signature="e#659#660#0" expanded="true" />
-            <element signature="e#1095#1096#0" expanded="true" />
-            <element signature="e#1124#1125#0" expanded="true" />
+            <element signature="e#362#363#0" expanded="true" />
+            <element signature="e#409#410#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/generateQuiz/AbstractQuestion.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="140">
+          <caret line="19" column="31" selection-start-line="19" selection-start-column="31" selection-end-line="19" selection-end-column="31" />
+          <folding>
+            <element signature="e#722#723#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/generateQuiz/QuestionsHolder.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="364">
-          <caret line="32" column="34" selection-start-line="32" selection-start-column="34" selection-end-line="32" selection-end-column="34" />
+        <state relative-caret-position="342">
+          <caret line="36" column="17" selection-start-line="36" selection-start-column="17" selection-end-line="36" selection-end-column="17" />
           <folding>
             <element signature="e#730#731#0" expanded="true" />
             <element signature="e#780#781#0" expanded="true" />
@@ -374,8 +384,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/generateQuiz/GenerateQuiz.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="23" column="64" selection-start-line="23" selection-start-column="64" selection-end-line="23" selection-end-column="64" />
+        <state relative-caret-position="246">
+          <caret line="23" column="65" selection-start-line="23" selection-start-column="65" selection-end-line="23" selection-end-column="65" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

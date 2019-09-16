@@ -8,7 +8,7 @@ public class GenerateQuiz {
     // - pole vygenerovanych otazok (cisla)
 
     private int [] randomedQuestionNumbers;
-    private List<SingleAnswerQuestion> questionList;
+    private List<AbstractQuestion> questionList;
     private RandomNumberGenerator randomNumberGenerator;
     private QuestionsHolder questionsHolder;
     public static int winCount;
@@ -21,12 +21,12 @@ public class GenerateQuiz {
     }
 
     private int[] getRandomedQuestionNumbers() {
-        this.randomNumberGenerator = new RandomNumberGenerator(5,questionsHolder.getCorrectAnswerQuestionMap().size());
+        this.randomNumberGenerator = new RandomNumberGenerator(4,questionsHolder.getCorrectAnswerQuestionMap().size());
         randomedQuestionNumbers = randomNumberGenerator.getNumbersArray();
         return randomedQuestionNumbers;
     }
 
-    public List<SingleAnswerQuestion> getQuestionList() {
+    public List<AbstractQuestion> getQuestionList() {
         getRandomedQuestionNumbers();
         for (int i = 0; i < randomedQuestionNumbers.length; i++){
             questionList.add(new SingleAnswerQuestion(randomedQuestionNumbers[i],questionsHolder));

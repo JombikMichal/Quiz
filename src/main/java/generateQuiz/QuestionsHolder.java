@@ -3,7 +3,8 @@ package generateQuiz;
 import java.util.*;
 
 public class QuestionsHolder {
-    private Map<String, String> correctAnswerQuestionMap;
+    private Map<String, String> correctAnswerQuestionSingleMap;
+    private Map<String, String> correctAnswerQuestionMultiMap;
     private Map<String, Map<String,String>> questionWithPossibleAnswers;
     private List<String> questions = new ArrayList<>();
     private String correctAnswer;
@@ -26,11 +27,13 @@ public class QuestionsHolder {
 
 
     public String getCorrectAnswer(String question){
-        String ans = this.correctAnswerQuestionMap.get(question);
+        String ans = this.correctAnswerQuestionSingleMap.get(question);
         for (String key : this.questionWithPossibleAnswers.keySet()){
-            for (String k : this.questionWithPossibleAnswers.get(key).keySet()){
-                if(questionWithPossibleAnswers.get(key).get(k).equals(this.correctAnswerQuestionMap.get(question))){
-                    correctAnswer = k;
+            if(key.equals(question)){
+                for (String k : this.questionWithPossibleAnswers.get(key).keySet()){
+                    if(questionWithPossibleAnswers.get(key).get(k).equals(this.correctAnswerQuestionSingleMap.get(question))){
+                        correctAnswer = k;
+                    }
                 }
             }
         }
@@ -42,7 +45,7 @@ public class QuestionsHolder {
     }
 
     private void initialize() {
-        this.correctAnswerQuestionMap = new HashMap<>() {{
+        this.correctAnswerQuestionSingleMap = new HashMap<>() {{
             put("What is 2 + 2? (Question with single answer)", "4");
             put("What is 3 + 9? (Question with single answer)", "12");
             put("What is 2 * 9? (Question with single answer)", "18");
@@ -55,7 +58,7 @@ public class QuestionsHolder {
             put("What is 2 * 0? (Question with single answer)", "0");
         }};
 
-        for (String key : this.correctAnswerQuestionMap.keySet()) {
+        for (String key : this.correctAnswerQuestionSingleMap.keySet()) {
             questions.add(key);
         }
 
@@ -98,9 +101,9 @@ public class QuestionsHolder {
                 put("d","191");
             }});
             put("What is 20 + 2? (Question with single answer)", new HashMap<>(){{
-                put("a","8");
+                put("a","22");
                 put("b","9");
-                put("c","22");
+                put("c","29");
                 put("d","1");
             }});
             put("What is 20 - 2? (Question with single answer)", new HashMap<>(){{
@@ -112,8 +115,8 @@ public class QuestionsHolder {
             put("What is 22 + 22? (Question with single answer)", new HashMap<>(){{
                 put("a","5");
                 put("b","9");
-                put("c","44");
-                put("d","1");
+                put("c","4");
+                put("d","44");
             }});
             put("What is 2 * 0? (Question with single answer)", new HashMap<>(){{
                 put("a","1");
@@ -125,6 +128,6 @@ public class QuestionsHolder {
     }
 
     public Map<String, String> getCorrectAnswerQuestionMap() {
-        return correctAnswerQuestionMap;
+        return correctAnswerQuestionSingleMap;
     }
 }

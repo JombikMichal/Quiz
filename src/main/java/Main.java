@@ -1,9 +1,5 @@
+import generateQuiz.AbstractQuestion;
 import generateQuiz.GenerateQuiz;
-import generateQuiz.RandomNumberGenerator;
-import generateQuiz.SingleAnswerQuestion;
-
-
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
@@ -12,7 +8,7 @@ public class Main {
 
     public static void main(String[] args) {
         int finish = 0;
-        List<SingleAnswerQuestion> allQuestions;
+        List<AbstractQuestion> allQuestions;
         do{
             final String playerName;
             String answer;
@@ -27,7 +23,7 @@ public class Main {
             System.out.println("***** START QUIZ!!! *****");
 
 
-            for (SingleAnswerQuestion key : allQuestions){
+            for (AbstractQuestion key : allQuestions){
                 key.display();
                 answer = scanner.next();
                 key.evaluation(answer);
