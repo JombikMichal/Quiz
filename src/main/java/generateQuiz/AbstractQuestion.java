@@ -5,12 +5,15 @@ import java.util.Map;
 public abstract class AbstractQuestion {
     private String question;
     private String answer;
+    private final String type;
+    private final int position;
     private Map<String,String> possibleAnswers;
-    private int position;
     private QuestionsHolder questionsHolder;
+    private ClassTypeHolder classTypeHolder = new ClassTypeHolder();
 
-    public AbstractQuestion(int position, QuestionsHolder questionsHolder) {
+    public AbstractQuestion(int position, QuestionsHolder questionsHolder,String type) {
         this.position = position;
+        this.type = classTypeHolder.getTypeName(type);
         this.questionsHolder = questionsHolder;
         this.question = questionsHolder.getQuestions(this.position);
         this.possibleAnswers = questionsHolder.getQuestionWithPossibleAnswers(this.question);
@@ -22,6 +25,9 @@ public abstract class AbstractQuestion {
     }
 
     public void display(){
+        if (type != null || !type.isEmpty()){
+            this.question += type;
+        }
         System.out.println(this.question);
         for (String key: this.possibleAnswers.keySet()){
             System.out.print(key + ". ");
@@ -30,7 +36,7 @@ public abstract class AbstractQuestion {
     }
 
     public void evaluation(String input){
-        if (answer.equals(input)){
+        if (answer.equals(input.trim())){
             int a = GenerateQuiz.winCount++;
             System.out.println(a);
         }
