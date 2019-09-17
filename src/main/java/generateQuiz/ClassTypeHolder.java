@@ -11,7 +11,7 @@ public class ClassTypeHolder {
 
         type = new HashMap<>(){{
             put(SingleAnswerQuestion.class.getName()," (Question with single answer)");
-            put(""," (Question with multiple answers)");
+            put(MultiAnswerQuestion.class.getName()," (Question with multiple answers)");
         }};
     }
 

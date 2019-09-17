@@ -9,17 +9,17 @@ public class Main {
     public static void main(String[] args) {
         int finish = 0;
         List<AbstractQuestion> allQuestions;
+
+        final String playerName;
+        System.out.println("Hello player! What is your name?");
+        playerName = scanner.next();
+
         do{
-            final String playerName;
             String answer;
             GenerateQuiz generateQuiz = new GenerateQuiz();
             allQuestions = generateQuiz.getQuestionList();
-
-
-            System.out.println("Hello player! What is your name?");
-            playerName = scanner.next();
             System.out.println("Hello " + playerName + "! Welcome to my Math Quiz! This Quiz will have a few questions. Questions could contains one or more correct answers! Good luck "
-            + playerName +"!!!");
+                    + playerName +"!!!");
             System.out.println("***** START QUIZ!!! *****");
 
 
@@ -30,6 +30,10 @@ public class Main {
                 finish++;
             }
             System.out.println("You had " + GenerateQuiz.winCount + "/" + allQuestions.size() +" answers correct");
+            System.out.println("Do you want to next Math Quiz?\nYes/No");
+            if (scanner.next().trim().equalsIgnoreCase("yes")){
+                finish =0;
+            }
 
         }while (finish < allQuestions.size());
 

@@ -20,16 +20,20 @@ public class GenerateQuiz {
         this.questionList = new ArrayList<>();
     }
 
-    private int[] getRandomedQuestionNumbers() {
-        this.randomNumberGenerator = new RandomNumberGenerator(4,questionsHolder.getCorrectAnswerQuestionMap().size());
+    private int[] getRandomedQuestionNumbers(int questionCount,int size) {
+        this.randomNumberGenerator = new RandomNumberGenerator(questionCount,size);
         randomedQuestionNumbers = randomNumberGenerator.getNumbersArray();
         return randomedQuestionNumbers;
     }
 
     public List<AbstractQuestion> getQuestionList() {
-        getRandomedQuestionNumbers();
-        for (int i = 0; i < randomedQuestionNumbers.length; i++){
-            questionList.add(new SingleAnswerQuestion(randomedQuestionNumbers[i],questionsHolder));
+        int singleAnswer[] = getRandomedQuestionNumbers(3,questionsHolder.getCorrectAnswerQuestionSingleMap().size());
+        int multiAnswer[] = getRandomedQuestionNumbers(1,questionsHolder.getCorrectAnswerQuestionMultiMap().size());
+        for (int i = 0; i < singleAnswer.length; i++){
+            questionList.add(new SingleAnswerQuestion(singleAnswer[i],questionsHolder));
+        }
+        for (int i = 0; i < multiAnswer.length; i++){
+            questionList.add(new MultiAnswerQuestion(multiAnswer[i],questionsHolder));
         }
         return questionList;
     }

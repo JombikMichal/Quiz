@@ -5,8 +5,12 @@ import java.util.*;
 public class QuestionsHolder {
     private Map<String, String> correctAnswerQuestionSingleMap;
     private Map<String, String> correctAnswerQuestionMultiMap;
+
     private Map<String, Map<String,String>> questionWithPossibleAnswers;
-    private List<String> questions = new ArrayList<>();
+
+    private List<String> singleQuestions = new ArrayList<>();
+    private List<String> multiQuestions = new ArrayList<>();
+
     private String correctAnswer;
 
 
@@ -15,8 +19,12 @@ public class QuestionsHolder {
         initialize();
     }
 
-    public String getQuestions(int pos) {
-        return questions.get(pos);
+
+    public String getQuestions(int pos,AbstractQuestion abstractQuestion) {
+        if (abstractQuestion instanceof MultiAnswerQuestion){
+            return multiQuestions.get(pos);
+        }
+        return singleQuestions.get(pos);
 
     }
 
@@ -25,23 +33,22 @@ public class QuestionsHolder {
 
     }
 
-
-    public String getCorrectAnswer(String question){
-        String ans = this.correctAnswerQuestionSingleMap.get(question);
+    public String getCorrectAnswer(String question, AbstractQuestion abstractQuestion){
+        Map<String, String> correctMap = this.correctAnswerQuestionSingleMap;
+        if (abstractQuestion instanceof MultiAnswerQuestion){
+            correctMap = this.correctAnswerQuestionMultiMap;
+        }
+        String ans = correctMap.get(question);
         for (String key : this.questionWithPossibleAnswers.keySet()){
             if(key.equals(question)){
                 for (String k : this.questionWithPossibleAnswers.get(key).keySet()){
-                    if(questionWithPossibleAnswers.get(key).get(k).equals(this.correctAnswerQuestionSingleMap.get(question))){
+                    if(questionWithPossibleAnswers.get(key).get(k).equals(correctMap.get(question))){
                         correctAnswer = k;
                     }
                 }
             }
         }
         return correctAnswer;
-    }
-
-    public Map<String, Map<String, String>> getQuestionWithPossibleAnswers() {
-        return questionWithPossibleAnswers;
     }
 
     private void initialize() {
@@ -59,10 +66,20 @@ public class QuestionsHolder {
             put("What is 2 * 0?", "0");
         }};
 
+        this.correctAnswerQuestionMultiMap = new HashMap<>() {{
+            put("4 = ?", "2^2");
+            put("9 = ?", "3^2");
+            put("14 = ?", "10+4");
+            put("100 = ?", "10^2");
+        }};
+
         for (String key : this.correctAnswerQuestionSingleMap.keySet()) {
-            questions.add(key);
+            singleQuestions.add(key);
         }
-        
+        for (String key : this.correctAnswerQuestionMultiMap.keySet()) {
+            multiQuestions.add(key);
+        }
+
         this.questionWithPossibleAnswers = new HashMap<>() {{
             put("What is 2 + 2?", new HashMap<>(){{
                 put("a","1");
@@ -124,10 +141,36 @@ public class QuestionsHolder {
                 put("c","0");
                 put("d","91");
             }});
+            put("4 = ?", new HashMap<>(){{
+                put("a"," 2^2");
+                put("b","-2^2");
+                put("c","1+3");
+                put("d","4^1");
+            }});
+            put("9 = ?", new HashMap<>(){{
+                put("a"," 2^2");
+                put("b","3^2");
+                put("c","1+3");
+                put("d","4^1");
+            }});
+            put("14 = ?", new HashMap<>(){{
+                put("a"," 2^2");
+                put("b","3^2");
+                put("c","10+4");
+                put("d","4^1");
+            }});
+            put("100 = ?", new HashMap<>(){{
+                put("a"," 2^2");
+                put("b","10^2");
+                put("c","1+3");
+                put("d","4^1");
+            }});
         }};
     }
 
-    public Map<String, String> getCorrectAnswerQuestionMap() {
+    public Map<String, String> getCorrectAnswerQuestionSingleMap() {
         return correctAnswerQuestionSingleMap;
     }
+
+    public Map<String, String> getCorrectAnswerQuestionMultiMap() { return correctAnswerQuestionMultiMap; }
 }

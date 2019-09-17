@@ -15,13 +15,17 @@ public abstract class AbstractQuestion {
         this.position = position;
         this.type = classTypeHolder.getTypeName(type);
         this.questionsHolder = questionsHolder;
-        this.question = questionsHolder.getQuestions(this.position);
+        this.question = questionsHolder.getQuestions(this.position,this);
         this.possibleAnswers = questionsHolder.getQuestionWithPossibleAnswers(this.question);
-        this.answer = questionsHolder.getCorrectAnswer(this.question);
+        this.answer = questionsHolder.getCorrectAnswer(this.question,this);
     }
 
     public String getAnswer() {
         return answer;
+    }
+
+    public QuestionsHolder getQuestionsHolder() {
+        return questionsHolder;
     }
 
     public void display(){
