@@ -13,8 +13,6 @@ public class GenerateQuiz {
     private QuestionsHolder questionsHolder;
     public static int winCount;
 
-
-
     public GenerateQuiz() {
         this.questionsHolder = new QuestionsHolder();
         this.questionList = new ArrayList<>();
@@ -28,7 +26,7 @@ public class GenerateQuiz {
 
     public List<AbstractQuestion> getQuestionList() {
         int singleAnswer[] = getRandomedQuestionNumbers(3,questionsHolder.getCorrectAnswerQuestionSingleMap().size());
-        int multiAnswer[] = getRandomedQuestionNumbers(1,questionsHolder.getCorrectAnswerQuestionMultiMap().size());
+        int multiAnswer[] = getRandomedQuestionNumbers(2,questionsHolder.getCorrectAnswerQuestionMultiMap().size());
         for (int i = 0; i < singleAnswer.length; i++){
             questionList.add(new SingleAnswerQuestion(singleAnswer[i],questionsHolder));
         }

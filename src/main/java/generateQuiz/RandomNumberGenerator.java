@@ -12,7 +12,6 @@ public class RandomNumberGenerator {
         this.numRange = numRange;
     }
 
-
     public boolean contains(final int[] array, final int v) {
 
         boolean result = false;

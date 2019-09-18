@@ -32,6 +32,7 @@ public class Main {
             System.out.println("You had " + GenerateQuiz.winCount + "/" + allQuestions.size() +" answers correct");
             System.out.println("Do you want to next Math Quiz?\nYes/No");
             if (scanner.next().trim().equalsIgnoreCase("yes")){
+                GenerateQuiz.winCount = 0;
                 finish =0;
             }
 

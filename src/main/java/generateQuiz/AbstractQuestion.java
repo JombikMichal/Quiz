@@ -1,10 +1,11 @@
 package generateQuiz;
 
 import java.util.Map;
+import java.util.Arrays;
 
 public abstract class AbstractQuestion {
     private String question;
-    private String answer;
+    private StringBuilder answer;
     private final String type;
     private final int position;
     private Map<String,String> possibleAnswers;
@@ -20,14 +21,6 @@ public abstract class AbstractQuestion {
         this.answer = questionsHolder.getCorrectAnswer(this.question,this);
     }
 
-    public String getAnswer() {
-        return answer;
-    }
-
-    public QuestionsHolder getQuestionsHolder() {
-        return questionsHolder;
-    }
-
     public void display(){
         if (type != null || !type.isEmpty()){
             this.question += type;
@@ -38,11 +31,16 @@ public abstract class AbstractQuestion {
             System.out.println(possibleAnswers.get(key));
         }
     }
+    private String sortString(String inputString)
+    {
+        char tempArray[] = inputString.toCharArray();
+        Arrays.sort(tempArray);
+        return new String(tempArray);
+    }
 
     public void evaluation(String input){
-        if (answer.equals(input.trim())){
-            int a = GenerateQuiz.winCount++;
-            System.out.println(a);
+        if (sortString(answer.toString().trim()).equalsIgnoreCase(sortString(input.trim()))){
+            GenerateQuiz.winCount++;
         }
     }
 }
