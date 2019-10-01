@@ -31,8 +31,7 @@ public abstract class AbstractQuestion {
             System.out.println(possibleAnswers.get(key));
         }
     }
-    private String sortString(String inputString)
-    {
+    private String sortString(String inputString) {
         char tempArray[] = inputString.toCharArray();
         Arrays.sort(tempArray);
         return new String(tempArray);

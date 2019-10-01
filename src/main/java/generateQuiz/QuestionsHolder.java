@@ -1,5 +1,6 @@
 package generateQuiz;
 
+import java.lang.reflect.Array;
 import java.util.*;
 
 public class QuestionsHolder {
@@ -10,9 +11,30 @@ public class QuestionsHolder {
     private List<String> singleQuestions = new ArrayList<>();
     private List<String> multiQuestions = new ArrayList<>();
 
+
+
+
     public QuestionsHolder() {
         initialize();
     }
+
+
+    public static List<Question> createSingleAns(){
+        //Object mapper JSON, java json deserialize
+
+        List<Question> questions = new ArrayList<>();
+        List<Answer> answers  = Arrays.asList(new Answer("4",true),new Answer("5",false),new Answer("9",false),new Answer("7",false));
+        questions.add(new Question("What is 2 + 2?",answers));
+        answers = Arrays.asList(new Answer("4",false),new Answer("1+8",true),new Answer("3^2",true),new Answer("17",false));
+        questions.add(new Question("9 = ?",answers));
+
+        return questions;
+    }
+
+
+
+
+
 
     public String getQuestions(int pos,AbstractQuestion abstractQuestion) {
         if (abstractQuestion instanceof MultiAnswerQuestion){
