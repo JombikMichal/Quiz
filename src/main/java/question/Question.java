@@ -1,6 +1,5 @@
 package question;
-
-import question.Answer;
+import question_list.QuestionsHolder;
 
 import java.util.List;
 
@@ -8,11 +7,13 @@ public class Question {
 
     private String question;
     private List<Answer> answers;
+    private String text;
     private String type;
 
     public Question(String question, List<Answer> answers) {
         this.question = question;
         this.answers = answers;
+        setTypeQuestion();
     }
 
     private long getCorrectAnsCount(){
@@ -29,14 +30,17 @@ public class Question {
         return correctAnsCount == getCorrectAnsCount();
     }
 
+
     private void setTypeQuestion(){
-        this.type = " (Question with single answer)";
+        this.text = " (Question with single answer)";
+        this.type = "single";
         int count = 0;
         for(Answer answer : answers){
             if (answer.isCorrect()){
                 count++;
                 if (count > 1){
-                    this.type = " (Question with multiple answers)";
+                    this.text = " (Question with multiple answers)";
+                    this.type = "multi";
                     break;
                 }
             }
@@ -44,8 +48,7 @@ public class Question {
     }
 
     public void display(){
-        setTypeQuestion();
-        System.out.println(this.question + this.type);
+        System.out.println(this.question + this.text);
         for (int i = 0; i < answers.size(); i++){
             System.out.print(i+1 +  ". ");
             System.out.println(answers.get(i).getValue());
@@ -58,5 +61,9 @@ public class Question {
 
     public List<Answer> getAnswers() {
         return answers;
+    }
+
+    public String getType() {
+        return type;
     }
 }
