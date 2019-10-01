@@ -40,7 +40,7 @@ public class Question {
             if (answer.isCorrect()){
                 count++;
                 if (count > 1){
-                    this.text = " (Question with multiple answers)";
+                    this.text = " (Question with multiple answers - separate your answer with a comma, i.e.: a,b,c)";
                     this.type = "multi";
                     break;
                 }

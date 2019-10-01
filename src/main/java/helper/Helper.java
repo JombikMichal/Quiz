@@ -30,7 +30,7 @@ public class Helper {
     }
 
     public static String[] singleChars(String s) {
-        return s.split("(?!^)");
+        return s.split(",\\s*");
     }
 
     public static String[] sortString(String inputString) {
