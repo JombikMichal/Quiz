@@ -1,3 +1,4 @@
+import helper.Helper;
 import question.Question;
 import question_list.QuestionsHolder;
 
@@ -26,7 +27,7 @@ public class Main {
             for (Question question : questions){
                 question.display();
                 answer = scanner.next();
-                if(question.evalute(answer)){
+                if(question.evalute(Helper.singleChars(answer))){
                     correctAnswer++;
                 }
             }

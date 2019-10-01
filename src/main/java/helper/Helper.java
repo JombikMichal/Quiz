@@ -31,7 +31,11 @@ public class Helper {
         return res;
     }
 
-    private String sortString(String inputString) {
+    public static String[] singleChars(String s) {
+        return s.split("(?!^)");
+    }
+
+    public static String sortString(String inputString) {
         char tempArray[] = inputString.toCharArray();
         Arrays.sort(tempArray);
         return new String(tempArray);

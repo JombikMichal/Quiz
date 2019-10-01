@@ -50,8 +50,8 @@ public class QuestionsHolder {
 //        answers = Arrays.asList(new Answer("10^2",true),new Answer("2^2",false),new Answer("3+1",false),new Answer("10*10",true));
 //        questions.add(new Question("100 = ?",answers));
 //
-//        answers = Arrays.asList(new Answer("6^2",true),new Answer("6*6",true),new Answer("30+6",true),new Answer("40-4",true));
-//        questions.add(new Question("36 = ?",answers));
+        answers = Arrays.asList(new Answer("6^2",true),new Answer("6*6",true),new Answer("30+6",true),new Answer("40-4",true));
+        questions.add(new Question("36 = ?",answers));
 
         return questions;
     }
