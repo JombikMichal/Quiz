@@ -1,4 +1,4 @@
-package generateQuiz;
+package question;
 
 public class Answer {
     private String value;

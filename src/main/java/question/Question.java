@@ -1,7 +1,8 @@
-package generateQuiz;
+package question;
+
+import question.Answer;
 
 import java.util.List;
-import java.util.stream.Stream;
 
 public class Question {
     private String question;
