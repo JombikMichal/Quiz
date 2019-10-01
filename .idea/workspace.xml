@@ -2,17 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="159ea822-1c20-443a-88c6-e40d2ddb427c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/helper/Helper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/generateQuiz/AbstractQuestion.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/generateQuiz/Answer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/question/Answer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/generateQuiz/ClassTypeHolder.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/generateQuiz/GenerateQuiz.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/generateQuiz/MultiAnswerQuestion.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/generateQuiz/Question.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/question/Question.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/generateQuiz/QuestionsHolder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/question_list/QuestionsHolder.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/generateQuiz/SingleAnswerQuestion.java" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -27,7 +17,7 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/question_list/QuestionsHolder.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="658">
@@ -51,11 +41,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
-              <caret line="19" column="26" selection-start-line="19" selection-start-column="26" selection-end-line="19" selection-end-column="26" />
+            <state relative-caret-position="400">
+              <caret line="38" column="30" selection-start-line="38" selection-start-column="30" selection-end-line="38" selection-end-column="30" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -115,8 +105,8 @@
         <option value="$PROJECT_DIR$/src/main/java/generateQuiz/QuestionsHolder.java" />
         <option value="$PROJECT_DIR$/src/main/java/generateQuiz/Question.java" />
         <option value="$PROJECT_DIR$/src/main/java/helper/Helper.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Main.java" />
         <option value="$PROJECT_DIR$/src/main/java/question_list/QuestionsHolder.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Main.java" />
       </list>
     </option>
   </component>
@@ -384,16 +374,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="19" column="26" selection-start-line="19" selection-start-column="26" selection-end-line="19" selection-end-column="26" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/helper/Helper.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="165">
@@ -408,6 +388,16 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="658">
           <caret line="53" column="56" lean-forward="true" selection-start-line="28" selection-start-column="9" selection-end-line="53" selection-end-column="56" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="400">
+          <caret line="38" column="30" selection-start-line="38" selection-start-column="30" selection-end-line="38" selection-end-column="30" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

@@ -8,7 +8,6 @@ public class Main {
     private static Scanner scanner = new Scanner(System.in);
 
     public static void main(String[] args) {
-        int correctAnswer = 0;
         List<Question> questions = QuestionsHolder.createSingleAns();
 
 
@@ -17,6 +16,7 @@ public class Main {
         playerName = scanner.next();
 
         do{
+            int correctAnswer = 0;
             String answer;
             System.out.println("Hello " + playerName + "! Welcome to my Math Quiz! This Quiz will have a few questions. Questions could contains one or more correct answers! Good luck "
                     + playerName +"!!!");
@@ -34,7 +34,6 @@ public class Main {
             System.out.println("You had " + correctAnswer + "/" + questions.size() +" answers correct");
             System.out.println("Do you want to next Math Quiz?\nYes/No");
             if (!scanner.next().trim().equalsIgnoreCase("yes")){
-                correctAnswer = 0;
                 break;
             }
 
