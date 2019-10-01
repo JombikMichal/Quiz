@@ -33,7 +33,7 @@ public class Helper {
         return s.split(",\\s*");
     }
 
-    public static String[] sortString(String inputString) {
+    public static String[] getNumbersOfAlpha(String inputString) {
         String result[] = new String[singleChars(inputString).length];
         for (int i = 0; i < singleChars(inputString).length; i++){
             result[i] = String.valueOf(getAlphaPosition(singleChars(inputString)[i].charAt(0)));

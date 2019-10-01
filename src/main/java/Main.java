@@ -2,8 +2,6 @@ import helper.Helper;
 import question.Question;
 import question.QuizQuestions;
 import question_list.QuestionsHolder;
-
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
@@ -31,8 +29,7 @@ public class Main {
             for (Question question : pickedQuestions){
                 question.display();
                 answer = scanner.next();
-                Helper.sortString(answer);
-                if(question.evalute(Helper.sortString(answer))){
+                if(question.evalute(Helper.getNumbersOfAlpha(answer))){
                     correctAnswer++;
                 }
             }
