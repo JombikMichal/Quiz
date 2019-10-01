@@ -1,6 +1,4 @@
 package helper;
-
-import java.util.Arrays;
 import java.util.Random;
 
 public class Helper {
@@ -35,10 +33,30 @@ public class Helper {
         return s.split("(?!^)");
     }
 
-    public static String sortString(String inputString) {
-        char tempArray[] = inputString.toCharArray();
-        Arrays.sort(tempArray);
-        return new String(tempArray);
+    public static String[] sortString(String inputString) {
+        String result[] = new String[singleChars(inputString).length];
+        for (int i = 0; i < singleChars(inputString).length; i++){
+            result[i] = String.valueOf(getAlphaPosition(singleChars(inputString)[i].charAt(0)));
+        }
+        return result;
+    }
+
+    public static char[] getAlphabet(){
+        char[] alpha = new char[26];
+        for(int i = 0; i < 26; i++){
+            alpha[i] = (char)(97 + i);
+        }
+        return alpha;
+    }
+
+    public static int getAlphaPosition(char alpha){
+        int result = 0;
+        for (int i = 0; i < getAlphabet().length; i++){
+            if(getAlphabet()[i] == alpha){
+                result = i;
+            }
+        }
+        return result;
     }
 
 }

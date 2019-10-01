@@ -15,6 +15,7 @@ public class Main {
         List<Question> questions = QuestionsHolder.createSingleAns();
         List<Question> pickedQuestions;
 
+
         System.out.println("Hello player! What is your name?");
         playerName = scanner.next();
 
@@ -30,7 +31,8 @@ public class Main {
             for (Question question : pickedQuestions){
                 question.display();
                 answer = scanner.next();
-                if(question.evalute(Helper.singleChars(answer))){
+                Helper.sortString(answer);
+                if(question.evalute(Helper.sortString(answer))){
                     correctAnswer++;
                 }
             }

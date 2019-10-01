@@ -1,4 +1,5 @@
 package question;
+import helper.Helper;
 import question_list.QuestionsHolder;
 
 import java.util.List;
@@ -23,7 +24,7 @@ public class Question {
     public boolean evalute(String... indexes){
         int correctAnsCount = 0;
         for (int i =0; i < indexes.length; i++){
-            if(answers.get(Integer.parseInt(indexes[i]) - 1).isCorrect()){
+            if(answers.get(Integer.parseInt(indexes[i])).isCorrect()){
                 correctAnsCount++;
             }
         }
@@ -50,7 +51,7 @@ public class Question {
     public void display(){
         System.out.println(this.question + this.text);
         for (int i = 0; i < answers.size(); i++){
-            System.out.print(i+1 +  ". ");
+            System.out.print(Helper.getAlphabet()[i] +  ". ");
             System.out.println(answers.get(i).getValue());
         }
     }

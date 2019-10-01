@@ -35,7 +35,7 @@ public class QuizQuestions {
 
     private void getQuestions(){
        getIndexes();
-       int [] single =  Helper.getNumbersArray(2,this.indexesSingle.size());
+       int [] single =  Helper.getNumbersArray(3,this.indexesSingle.size());
        int [] multi =  Helper.getNumbersArray(2,this.indexesMulti.size());
 
        for (int i =0; i < single.length; i++){
