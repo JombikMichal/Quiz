@@ -35,16 +35,9 @@ public class Question {
     private void setTypeQuestion(){
         this.text = " (Question with single answer)";
         this.type = "single";
-        int count = 0;
-        for(Answer answer : answers){
-            if (answer.isCorrect()){
-                count++;
-                if (count > 1){
-                    this.text = " (Question with multiple answers - separate your answer with a comma, i.e.: a,b,c)";
-                    this.type = "multi";
-                    break;
-                }
-            }
+        if(this.getCorrectAnsCount() > 1){
+            this.text = " (Question with multiple answers - separate your answer with a comma, i.e.: a,b,c)";
+            this.type = "multi";
         }
     }
 
