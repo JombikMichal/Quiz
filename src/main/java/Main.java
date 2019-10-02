@@ -10,7 +10,7 @@ public class Main {
 
     public static void main(String[] args) {
         final String playerName;
-        List<Question> questions = QuestionsHolder.createSingleAns();
+        List<Question> questions = QuestionsHolder.createQuestionList();
         List<Question> pickedQuestions;
 
 

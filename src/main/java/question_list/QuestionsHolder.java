@@ -9,7 +9,7 @@ public class QuestionsHolder {
 
     public QuestionsHolder() {}
 
-    public static List<Question> createSingleAns(){
+    public static List<Question> createQuestionList(){
         //Object mapper JSON, java json deserialize
 
         List<Question> questions = new ArrayList<>();
